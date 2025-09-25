@@ -2,6 +2,25 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Environment Setup
+
+Before running the application, you need to create a `.env.local` file in the root directory with the following environment variables:
+
+```env
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_specific_password
+EMAIL_TO=recipient_email@gmail.com
+MONGODB_URI=your_mongodb_connection_string
+```
+
+**Environment Variables Description:**
+- `EMAIL_USER`: Gmail address used for sending emails through the contact form
+- `EMAIL_PASS`: App-specific password for Gmail (not your regular password)
+- `EMAIL_TO`: Email address where contact form submissions will be sent
+- `MONGODB_URI`: MongoDB connection string for storing portfolio data
+
+### Running the Development Server
+
 First, run the development server:
 
 ```bash
