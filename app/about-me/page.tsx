@@ -150,9 +150,12 @@ import {
 import { SiAutodesk, SiBlender, SiUnrealengine } from "react-icons/si";
 
 
-export default function PortfolioPage() {
+const page = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-indigo-950 via-indigo-900 to-indigo-950 text-indigo-100 overflow-hidden">
+    <div
+      style={{backgroundImage: "url(/bg-16.png)"}}
+      className='w-screen h-screen bg-cover bg-center flex items-center justify-center'>
+      {/* <div className="relative min-h-screen bg-gradient-to-br from-indigo-950 via-indigo-900 to-indigo-950 text-indigo-100 overflow-hidden"> */}
       {/* Floating background shapes */}
       <div className="absolute top-10 left-5 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-52 h-52 bg-pink-400/20 rounded-full blur-3xl animate-pulse" />
@@ -328,3 +331,5 @@ export default function PortfolioPage() {
     </div>
   );
 }
+
+export default page

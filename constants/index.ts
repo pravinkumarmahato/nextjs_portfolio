@@ -227,10 +227,10 @@ export const Projects = [
     documentation: ""
   },
   {
-    title: "Portable and Cost-Effective Spirometer for Lung Capacity Check",
+    title: "Lung Capacity Check - Spirometry for Pulmonary Function Test",
     text: "A compact and affordable digital spirometer designed to measure and monitor lung health by calculating key respiratory parameters such as FVC, FEV₁, and PEFR.\nThe device uses the Bernoulli-Venturi principle to determine airflow and volume based on pressure differences within a venturi-shaped tube. These measurements are processed and displayed through a desktop application connected to the handheld spirometer.\nBuilt with Python, MongoDB, and Matplotlib, the system enables data storage, visualization, and result analysis for patients. It also includes an Incentive Spirometry mode, allowing recovering patients to perform guided lung exercises digitally.\nThis project offers a low-cost, portable alternative to traditional bulky spirometers — ideal for rural healthcare centers, diagnostic labs, and pulmonary recovery programs.",
     src: "/Spirometer.png",
-    github: "",
+    github: "https://github.com/pravinkumarmahato/LungCapacityCheck",
     video: "",
     documentation: ""
   },
@@ -248,7 +248,7 @@ export const Projects = [
     src: "/NDVI.png",
     github: "https://github.com/pravinkumarmahato/Crop-Health-Analysis-using-NDVI",
     video: "https://www.youtube.com/embed/MoILI6NdK5Q ",
-    explaination: "https://drive.google.com/file/d/1AmsfofBZpDbOTCni3IlmD5OXvtTxnxYS/view?usp=sharing",
+    explaination: "https://www.youtube.com/embed/L9qOARq9S9k",
     documentation: ""
   },
   {

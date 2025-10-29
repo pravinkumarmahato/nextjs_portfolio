@@ -33,7 +33,7 @@ export default function Home() {
             Currently, I am focused on building responsive full-stack web applications.
           </p>
           <div className="flex-col md:flex-row hidden md:flex gap-5">
-            <Link href="/my-skills" className="rounded-[20px] group relative bg-blue-500 hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]">
+            <Link href="/about-me" className="rounded-[20px] group relative bg-blue-500 hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]">
               Learn More
             </Link>
             <Link href="/my-projects" className="rounded-[20px] group relative bg-transparent border border-white px-5 py-3 text-lg text-white max-w-[200px]">
@@ -49,7 +49,7 @@ export default function Home() {
       </div>
 
       <div className="absolute flex bottom-10 z-[20] right-5 flex-col md:hidden gap-5">
-        <Link href="/my-skills" className="rounded-[20px] bg-blue-500 px-5 py-3 text-lg text-white max-w-[200px]">
+        <Link href="/about-me" className="rounded-[20px] bg-blue-500 px-5 py-3 text-lg text-white max-w-[200px]">
           Learn More
         </Link>
         <Link href="/my-projects" className="rounded-[20px] bg-transparent border border-white px-5 py-3 text-lg text-white max-w-[200px]">
