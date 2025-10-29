@@ -198,7 +198,7 @@ export const Projects = [
     src: "/WhatsappWeb.JPG",
     github: "https://github.com/pravinkumarmahato/Crop-Health-Analysis-using-NDVI",
     video: "",
-    live: "https://whatsapp-web-clone-client-plum.vercel.app/",
+    live: "https://whatsapp-clone.pravinkumarmahato.dev/",
     documentation: ""
   },
   {
@@ -207,7 +207,7 @@ export const Projects = [
     src: "/RAG.png",
     github: "https://github.com/pravinkumarmahato/multilang-rag-frontend",
     video: "",
-    live: "https://whatsapp-web-clone-client-plum.vercel.app/",
+    live: "https://multilang-rag-frontend.onrender.com/",
     documentation: ""
   },
   {
