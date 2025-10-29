@@ -53,28 +53,28 @@ const ProjectCard = ({ project }: Props) => {
         <motion.div
           className='flip-card-inner w-full h-full'
           initial={false}
-          animate={{ rotateY: isFlipped ? 180 : 360 }}
+          animate={{ rotateY: isFlipped ? 180 : 0 }}
           transition={{ duration: 0.6, animationDirection: 'normal' }}
           onAnimationComplete={() => setIsAnimating(false)}
         >
           <div
-            style={{ backgroundImage: `url(${project.src})` }}
+            style={{ backgroundImage: `url(${project.src})`, backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
             className='w-full h-full group relative flip-card-front bg-contain bg-no-repeat bg-center text-white rounded-lg p-4'>
-            <div className='absolute inset-0 w-full h-full rounded-md bg-black opacity-0 group-hover:opacity-40' />
-            <div className='absolute inset-0 w-full h-full text-[20px] pb-10 hidden group-hover:flex items-center z-[20] justify-center'>
+            <div className='absolute inset-0 w-full h-full rounded-md bg-black opacity-0 group-hover:opacity-40 pointer-events-none' />
+            <div className='absolute inset-0 w-full h-full text-[20px] pb-10 hidden group-hover:flex items-center z-[20] justify-center pointer-events-none'>
               Learn more &gt;
             </div>
           </div>
           <div
-            style={{ backgroundImage: `url(${project.src})` }}
+            style={{ backgroundImage: `url(${project.src})`, transform: 'rotateY(180deg)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
             className='w-full h-full group relative flip-card-back bg-contain bg-no-repeat bg-center text-white rounded-lg p-4'>
-            <div className='absolute inset-0 w-full h-full rounded-md bg-black opacity-50' />
+            <div className='absolute inset-0 w-full h-full rounded-md bg-black opacity-50 pointer-events-none' />
             <div className='flex flex-col gap-10 py-3 z-[30] h-full justify-between'>
               <div>
                 <h1 className='text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)] text-center text-2xl font-bold'>{project.title}</h1>
               </div>
               <button
-                className='self-end bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full p-3 text-white flex items-center justify-center z-40'
+                className='self-end bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full p-3 text-white flex items-center justify-center z-40 pointer-events-auto'
                 onClick={handleEyeClick}
                 title='View Details'
               >
