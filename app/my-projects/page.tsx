@@ -22,11 +22,18 @@ const page = () => {
   return (
     <div style={{backgroundImage: "url('/bg-5.png')"}}
      className='w-screen h-screen flex items-center justify-center bg-center bg-cover'>
+      <div className='pt-[150px] pb-[100px]'>
+      <h1 className="text-center font-semibold pb-3 text-white text-[45px]">Projects</h1>
       <motion.div
-        className='grid 2xl:grid-cols-3 xl:grid-cols-2 gap-5 max-w-[90%] max-h-90%]'
+        className='grid 2xl:grid-cols-3 xl:grid-cols-2 gap-6 max-w-[99%] scrollbar-hide'
         variants={containerVariants}
         initial="hidden"
         animate="show"
+        style={{
+          maxHeight: '85vh',
+          overflowY: 'auto',
+          width: '100%',
+        }}
       >
         {Projects.map((project, index) => (
           <motion.div key={index} variants={cardVariants}>
@@ -34,6 +41,7 @@ const page = () => {
           </motion.div>
         ))}
       </motion.div>
+      </div>
     </div>
   )
 }

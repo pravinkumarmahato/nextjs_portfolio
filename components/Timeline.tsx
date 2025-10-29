@@ -1,6 +1,6 @@
 "use client";
-import { useScroll, useTransform, motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import React from "react";
 
 type ExperienceItem = {
   date: string;
@@ -13,6 +13,7 @@ type EducationItem = {
   date: string;
   degree: string;
   institute: string;
+  grade: string;
   contents: string[];
 };
 
@@ -24,30 +25,11 @@ interface TimelineProps {
 }
 
 export const Timeline: React.FC<TimelineProps> = ({ data, title }) => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
-  }, [ref]);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 10%", "end 50%"],
-  });
-
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <div className="pt-[100px]">
-      <h1 className="text-center font-semibold text-white text-[40px]">{title}</h1>
+      <h1 className="text-center font-semibold text-white text-[45px]">{title}</h1>
       <div
-        ref={ref}
         className="relative pb-20 mt-[0px] scrollbar-hide w-full "
         style={{
           maxHeight: '85vh',
@@ -75,8 +57,9 @@ export const Timeline: React.FC<TimelineProps> = ({ data, title }) => {
                       <div className="text-lg font-bold text-purple-400 mb-1">{item.date}</div>
                       {isEducation ? (
                         <>
-                          <div className="text-2xl font-bold text-neutral-300">{(item as EducationItem).degree}</div>
-                          <div className="text-xl text-neutral-400 mb-2">{(item as EducationItem).institute}</div>
+                          <div className="text-2xl font-bold text-neutral-300 mb-2">{(item as EducationItem).degree}</div>
+                          <div className="text-xl font-semibold text-neutral-400 mb-2">{(item as EducationItem).institute}</div>
+                          <div className="text-lg font-semibold text-neutral-400 mb-2">Grade: {(item as EducationItem).grade}</div>
                         </>
                       ) : (
                         <>
@@ -112,8 +95,9 @@ export const Timeline: React.FC<TimelineProps> = ({ data, title }) => {
                       <div className="text-lg font-bold text-purple-400 mb-1">{item.date}</div>
                       {isEducation ? (
                         <>
-                          <div className="text-2xl font-bold text-neutral-300">{(item as EducationItem).degree}</div>
-                          <div className="text-xl text-neutral-400 mb-2">{(item as EducationItem).institute}</div>
+                          <div className="text-2xl font-bold text-neutral-300 mb-2">{(item as EducationItem).degree}</div>
+                          <div className="text-xl font-semibold text-neutral-400 mb-2">{(item as EducationItem).institute}</div>
+                          <div className="text-lg font-semibold text-neutral-400 mb-2">Grade: {(item as EducationItem).grade}</div>
                         </>
                       ) : (
                         <>
@@ -157,20 +141,7 @@ export const Timeline: React.FC<TimelineProps> = ({ data, title }) => {
             </div>
           );
         })}
-        <div
-          style={{
-            height: height + "px",
-          }}
-          className="absolute items-center justify-center top-0 overflow-hidden  w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
-        >
-          {/* <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-lavender/50 to-transparent from-[0%] via-[10%] rounded-full"
-          /> */}
-        </div>
+        
       </div>
     </div>
   );

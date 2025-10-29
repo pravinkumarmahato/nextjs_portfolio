@@ -71,8 +71,7 @@ const ProjectCard = ({ project }: Props) => {
             <div className='absolute inset-0 w-full h-full rounded-md bg-black opacity-50' />
             <div className='flex flex-col gap-10 py-3 z-[30] h-full justify-between'>
               <div>
-                <h1 className='text-white text-2xl font-semibold'>{project.title}</h1>
-                {/* <p className='text-gray-200 text-[17px]'>{project.text}</p> */}
+                <h1 className='text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)] text-center text-2xl font-bold'>{project.title}</h1>
               </div>
               <button
                 className='self-end bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full p-3 text-white flex items-center justify-center z-40'
@@ -98,7 +97,7 @@ const ProjectCard = ({ project }: Props) => {
               &times;
             </button>
             <h2 className='text-2xl font-bold mb-2'>{project.title}</h2>
-            <p className='mb-4 text-gray-700'>{project.text}</p>
+            <p className='mb-4 text-gray-700 whitespace-pre-line'>{project.text}</p>
             <div className='flex flex-wrap gap-4 mb-4'>
               {project.github && (
                 <a href={project.github} target='_blank' rel='noopener noreferrer' className='flex items-center gap-2 text-blue-600 hover:underline'>
