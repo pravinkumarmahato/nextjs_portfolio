@@ -212,8 +212,8 @@ export const Projects = [
   },
   {
     title: "Human Presence Detection Using RF Signals",
-    text: "",
-    src: "/RF_Detection.jpg",
+    text: "This project presents an energy-efficient and device-free human presence detection system based on Radio Frequency (RF) signal analysis.\nUsing an ESP32 module as a receiver, the system captures Received Signal Strength Indicator (RSSI) data transmitted from a Wi-Fi source. When a person moves within the monitored area, the human body — composed mostly of water — absorbs and distorts RF waves, causing measurable fluctuations in signal strength.\nBy applying moving average filtering and variance-based statistical analysis, the model detects these variations and classifies human presence with over 90% accuracy in controlled indoor environments.\nThis low-cost, non-intrusive solution eliminates the need for cameras or infrared sensors, making it ideal for smart homes, IoT systems, and security automation.\nA practical demonstration of how wireless sensing and signal analytics can enable intelligent ambient awareness.",
+    src: "/RF_Detection.png",
     github: "",
     video: "",
     documentation: ""
@@ -228,7 +228,7 @@ export const Projects = [
   },
   {
     title: "Lung Capacity Check - Spirometry for Pulmonary Function Test",
-    text: "A compact and affordable digital spirometer designed to measure and monitor lung health by calculating key respiratory parameters such as FVC, FEV₁, and PEFR.\nThe device uses the Bernoulli-Venturi principle to determine airflow and volume based on pressure differences within a venturi-shaped tube. These measurements are processed and displayed through a desktop application connected to the handheld spirometer.\nBuilt with Python, MongoDB, and Matplotlib, the system enables data storage, visualization, and result analysis for patients. It also includes an Incentive Spirometry mode, allowing recovering patients to perform guided lung exercises digitally.\nThis project offers a low-cost, portable alternative to traditional bulky spirometers — ideal for rural healthcare centers, diagnostic labs, and pulmonary recovery programs.",
+    text: "A low-cost, portable spirometer designed to measure and monitor lung function digitally.\nBuilt using the Bernoulli–Venturi principle, the device calculates airflow and lung volume based on differential pressure readings captured by an MPX5010DP sensor connected to an Arduino Uno.\nThe measured data is processed and visualized through a desktop application, which computes key spirometry parameters such as FEV₁, FVC, and PEFR to assess respiratory health.\nAdditionally, the system features an Incentive Spirometry mode, helping patients perform guided breathing exercises for faster recovery. \nPresented at Mastek’s Project Deep Blue Season 7, the project secured the 2nd Runner-up position for its innovation and real-world impact.\nA practical, cost-effective solution aimed at improving accessibility to pulmonary diagnostics, especially in rural and home-care environments.",
     src: "/Spirometer.png",
     github: "https://github.com/pravinkumarmahato/LungCapacityCheck",
     video: "",
