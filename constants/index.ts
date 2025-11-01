@@ -189,14 +189,14 @@ export const Projects = [
     src: "/WebPortfolio.JPG",
     github: "https://github.com/pravinkumarmahato/nextjs_portfolio",
     video: "",
-    live: "https://whatsapp-web-clone-client-plum.vercel.app/",
+    live: "https://pravinkumarmahato.dev",
     documentation: ""
   },
   {
     title: "Whatsapp Web Clone",
     text: "A fully functional WhatsApp Web clone built with React, TypeScript, Tailwind CSS, and Socket.io, designed to replicate the real-time messaging experience of WhatsApp Web.\nThe application supports secure authentication, real-time messaging, conversation search, and date-grouped chat history, all within a modern, responsive UI closely inspired by WhatsApp’s original design.\nThe backend, built with Node.js and Express, provides RESTful APIs for user authentication and message management, while Socket.io ensures seamless two-way communication for instant message delivery and read-receipt updates.\nThis project also includes webhook payload processing to handle incoming and outgoing messages dynamically, ensuring real-time synchronization between users.\nTech Stack: React, TypeScript, Tailwind CSS, Material UI, Node.js, Express, Socket.io, MongoDB.\n\nKey Highlights:\n• Real-time chat functionality\n• Secure login and registration\n• WhatsApp-like clean UI\n• Responsive and mobile-friendly\n• REST + WebSocket-based architecture",
     src: "/WhatsappWeb.JPG",
-    github: "https://github.com/pravinkumarmahato/Crop-Health-Analysis-using-NDVI",
+    github: "https://github.com/pravinkumarmahato/whatsapp_web_clone_client",
     video: "",
     live: "https://whatsapp-clone.pravinkumarmahato.dev/",
     documentation: ""
@@ -207,7 +207,7 @@ export const Projects = [
     src: "/RAG.png",
     github: "https://github.com/pravinkumarmahato/multilang-rag-frontend",
     video: "",
-    live: "https://multilang-rag-frontend.onrender.com/",
+    live: "https://multilang-rag.pravinkumarmahato.dev/",
     documentation: ""
   },
   {
@@ -216,7 +216,7 @@ export const Projects = [
     src: "/RF_Detection.png",
     github: "",
     video: "",
-    documentation: ""
+    documentation: "https://drive.google.com/file/d/1wZGZP65f6AUbzIgJxDOPKLbrNrxZyrNo/view"
   },
   {
     title: "Steganography Based Data Hiding",
@@ -224,7 +224,7 @@ export const Projects = [
     src: "/Steganography.png",
     github: "https://github.com/pravinkumarmahato/Steganography_Based_Data_Hiding",
     video: "",
-    documentation: ""
+    documentation: "https://drive.google.com/drive/folders/1Jsc_K9txBCWEnoPuiuhzfJZQpDgWkE2N?usp=sharing"
   },
   {
     title: "Lung Capacity Check - Spirometry for Pulmonary Function Test",
@@ -232,7 +232,7 @@ export const Projects = [
     src: "/Spirometer.png",
     github: "https://github.com/pravinkumarmahato/LungCapacityCheck",
     video: "",
-    documentation: ""
+    documentation: "https://drive.google.com/drive/folders/1Bg8aoW-F-Iai47vLXIHjGiYvYWVw0if1?usp=sharing"
   },
   {
     title: "Face Recognition Based Security Camera and Door Unlock System",
@@ -240,14 +240,14 @@ export const Projects = [
     src: "/FaceRecognition.JPG",
     github: "https://github.com/pravinkumarmahato/Face-Recognition-Based-Security-Camera-and-Door-Unlock-System",
     video: "",
-    documentation: ""
+    documentation: "https://drive.google.com/file/d/1Ln2ACwlUrvlx3toF9hv3qx9WK7fXdEZF/view?usp=sharing"
   },
   {
     title: "Precision Agriculture Using Normalized Difference Vegetation Index",
     text: "This project leverages NDVI (Normalized Difference Vegetation Index) to analyze crop health through image-based vegetation assessment. NDVI helps farmers and researchers evaluate the vitality of crops by measuring how plants reflect near-infrared (NIR) and red light—healthy plants reflect more NIR and absorb more red light.\nBuilt with Python (Flask, PIL), the system processes RGB and NIR images to compute NDVI values and visualize crop health on a web interface. The application enables users to monitor plant conditions, detect early signs of stress or disease, and make data-driven agricultural decisions.\n\nKey Features:\n• NDVI-based vegetation health analysis\n• Integration of RGB & NIR imagery\n• Flask-based interactive web application\n• Visual NDVI output for easy interpretation\n• Supports precision farming and crop monitoring\n\nThis project bridges remote sensing, image processing, and web technology to promote sustainable precision agriculture.",
     src: "/NDVI.png",
     github: "https://github.com/pravinkumarmahato/Crop-Health-Analysis-using-NDVI",
-    video: "https://www.youtube.com/embed/MoILI6NdK5Q ",
+    video: "https://www.youtube.com/embed/MoILI6NdK5Q",
     explaination: "https://www.youtube.com/embed/L9qOARq9S9k",
     documentation: ""
   },
