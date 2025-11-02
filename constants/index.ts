@@ -254,7 +254,7 @@ export const Projects = [
   {
     title: "RFID-Based Attendance Management System",
     text: "An IoT-powered solution that automates student attendance using RFID (Radio Frequency Identification) technology. Each student is assigned an RFID card that acts as a unique digital ID. When scanned near the RFID reader, the NodeMCU (ESP8266) microcontroller validates the card and automatically records attendance in the MySQL database.\nThe system eliminates manual errors, saves time, and ensures accurate attendance tracking. Users receive real-time feedback on an LCD display, and attendance data is accessible through a web portal built with HTML, CSS, Bootstrap, and PHP for Admin, Faculty, and Students.\n\nKey Features:\n• Automated attendance via RFID\n• Secure role-based login\n• Real-time attendance records\n• LCD feedback for each scan\n• Database-driven reporting\n\nThis project demonstrates seamless integration of embedded systems, web technologies, and IoT automation to modernize traditional attendance management.",
-    src: "/RFID.JPG",
+    src: "/RFID.png",
     github: "https://github.com/pravinkumarmahato/RFID-Based-Attendance-Management-System",
     video: "",
     documentation: ""
