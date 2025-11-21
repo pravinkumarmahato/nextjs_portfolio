@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaEye, FaGithub, FaBook, FaVideo } from 'react-icons/fa'
+import { FaEye, FaGithub, FaBook, FaVideo, FaGlobe } from 'react-icons/fa'
 
 interface Project {
   title: string;
@@ -10,6 +10,7 @@ interface Project {
   github?: string;
   video?: string;
   documentation?: string;
+  live?: string;
 }
 
 interface Props {
@@ -107,6 +108,11 @@ const ProjectCard = ({ project }: Props) => {
               {project.documentation && project.documentation !== '' && (
                 <a href={project.documentation} target='_blank' rel='noopener noreferrer' className='flex items-center gap-2 text-green-700 hover:underline'>
                   <FaBook /> Docs
+                </a>
+              )}
+              {project.live && project.live !== '' && (
+                <a href={project.live} target='_blank' rel='noopener noreferrer' className='flex items-center gap-2 text-green-700 hover:underline'>
+                  <FaGlobe /> Live
                 </a>
               )}
               {project.video && project.video !== '' && (
