@@ -185,7 +185,7 @@ export const Projects = [
   },
   {
     title: "Modern Nextjs Portfolio",
-    text: "",
+    text: "A polished personal portfolio built with Next.js 13 App Router, TypeScript, and Tailwind CSS to deliver a fast, accessible, and visually engaging experience.\nThe site highlights professional achievements, skills, and project work through reusable UI components, animated section transitions, and responsive layouts tailored for mobile, tablet, and desktop visitors.\nDynamic metadata, image optimization, and incremental static regeneration ensure strong SEO and instant page loads, while a server-side contact form with form validation routes inquiries securely.\n\nKey Highlights:\n• App Router architecture with server and client components\n• Tailwind-powered design system and Framer Motion animations\n• SEO-friendly OG images, metadata, and structured content\n• Contact form backed by API route validation and email delivery\n• Modular content sourcing via typed constants for easy updates",
     src: "/WebPortfolio.JPG",
     github: "https://github.com/pravinkumarmahato/nextjs_portfolio",
     video: "",
