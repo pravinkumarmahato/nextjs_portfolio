@@ -1,335 +1,403 @@
-// import { Trophy, Award } from "lucide-react"
-// import Image from "next/image"
-
-// // Card Component
-// function Card({ children, className }: { children: React.ReactNode; className?: string }) {
-//   return <div className={`rounded-xl bg-[#1a1033] shadow-lg ${className}`}>{children}</div>
-// }
-
-// // CardContent Component
-// function CardContent({ children, className }: { children: React.ReactNode; className?: string }) {
-//   return <div className={`p-6 ${className}`}>{children}</div>
-// }
-
-// // Button Component
-// function Button({
-//   children,
-//   className,
-//   ...props
-// }: React.ButtonHTMLAttributes<HTMLButtonElement> & { className?: string }) {
-//   return (
-//     <button
-//       className={`px-4 py-2 rounded-xl border border-purple-400 text-purple-300 hover:bg-purple-500/20 transition ${className}`}
-//       {...props}
-//     >
-//       {children}
-//     </button>
-//   )
-// }
-
-// const page = () => {
-//   return (
-//     <div className="min-h-screen bg-gradient-to-b from-[#0a001a] to-[#120029] text-white p-8">
-//       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-//         {/* Left Section */}
-//         <Card>
-//           <CardContent>
-//             <h1 className="text-3xl font-bold text-blue-400 mb-6">
-//               Journey of a 3D Artist
-//             </h1>
-
-//             {/* Avatar */}
-//             <div className="flex justify-center mb-6">
-//               <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg">
-//                 <Image
-//                   src="/avatar.png" // put avatar image in public folder
-//                   alt="3D Artist Avatar"
-//                   width={160}
-//                   height={160}
-//                   className="object-cover"
-//                 />
-//               </div>
-//             </div>
-
-//             {/* About Me */}
-//             <h2 className="text-xl font-semibold text-blue-300 mb-3">About Me</h2>
-//             <p className="text-sm leading-relaxed text-gray-300 mb-6">
-//               Welcome! I’m a passionate 3D artist specializing in digital
-//               storytelling and design. My work blends technical skill with
-//               creativity to craft immersive visual experiences that inspire
-//               imagination.
-//             </p>
-
-//             {/* Skills */}
-//             <div className="grid grid-cols-3 gap-4 text-center text-sm text-gray-300">
-//               <div className="flex flex-col items-center">
-//                 <Image src="/icons/zbrush.png" alt="ZBrush" width={40} height={40} />
-//                 ZBrush
-//               </div>
-//               <div className="flex flex-col items-center">
-//                 <Image src="/icons/maya.png" alt="Maya" width={40} height={40} />
-//                 Maya
-//               </div>
-//               <div className="flex flex-col items-center">
-//                 <Image src="/icons/substance.png" alt="Substance" width={40} height={40} />
-//                 Substance
-//               </div>
-//               <div className="flex flex-col items-center">
-//                 <Image src="/icons/painter.png" alt="Painter" width={40} height={40} />
-//                 Painter
-//               </div>
-//               <div className="flex flex-col items-center">
-//                 <Image src="/icons/unreal.png" alt="Unreal Engine" width={40} height={40} />
-//                 Unreal Engine
-//               </div>
-//               <div className="flex flex-col items-center">
-//                 <Image src="/icons/marvelous.png" alt="Marvelous Designer" width={40} height={40} />
-//                 Marvelous Designer
-//               </div>
-//             </div>
-//           </CardContent>
-//         </Card>
-
-//         {/* Right Section */}
-//         <Card>
-//           <CardContent>
-//             <h2 className="text-3xl font-bold text-pink-400 mb-6">
-//               Milestones & Triumphs
-//             </h2>
-
-//             <div className="grid grid-cols-1 gap-6">
-//               <div className="p-4 rounded-xl bg-[#24124d] flex items-center gap-4">
-//                 <Trophy className="text-yellow-400" />
-//                 <span>Secured <b>All India Rank 80</b> in the <b>VITMEE Entrance Examination</b>.</span>
-//               </div>
-
-//               <div className="p-4 rounded-xl bg-[#24124d] flex items-center gap-4">
-//                 <Award className="text-pink-400" />
-//                 <span>Achieved <b>1st Place</b> in the <b>Internal Hackathon</b> organized by the MCA Department, VIT Vellore.</span>
-//               </div>
-
-//               <div className="p-4 rounded-xl bg-[#24124d] flex items-center gap-4">
-//                 <Award className="text-blue-400" />
-//                 <span>Won <b>2nd Place</b> at the <b>Internal Hackathon of KC College</b>.</span>
-//               </div>
-
-//               <div className="p-4 rounded-xl bg-[#24124d] flex items-center gap-4">
-//                 <Trophy className="text-green-400" />
-//                 <span>Awarded <b>2nd Runner-Up</b> in <b>Mastek’s Deep Blue Season 7</b> among <b>282 registered teams</b>.</span>
-//               </div>
-
-//               <div className="p-4 rounded-xl bg-[#24124d] flex items-center gap-4">
-//                 <Award className="text-purple-400" />
-//                 <span>Successfully <b>participated in HackSRM 3.0</b>, a national-level virtual hackathon conducted by SRM University AP and NextTechLab AP.</span>
-//               </div>
-//             </div>
-//           </CardContent>
-//         </Card>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default page
-
 "use client";
 
-import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/grid";
-import {
-  FaPaintBrush,
-  FaCubes,
-  FaUnity,
-  FaTshirt,
-  FaFilm,
-} from "react-icons/fa";
-import { SiAutodesk, SiBlender, SiUnrealengine } from "react-icons/si";
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import Image from "next/image";
+import { achievements } from "@/constants/index";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 12,
+    },
+  },
+};
+
+const floatingAnimation = {
+  y: [-8, 8, -8],
+  transition: {
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+  },
+};
+
+// 3D Tilt Card Component
+function AchievementCard({ achievement, index }: { achievement: typeof achievements[0]; index: number }) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const rotateX = useTransform(y, [-100, 100], [10, -10]);
+  const rotateY = useTransform(x, [-100, 100], [-10, 10]);
+
+  const springRotateX = useSpring(rotateX, { stiffness: 300, damping: 30 });
+  const springRotateY = useSpring(rotateY, { stiffness: 300, damping: 30 });
+
+  function handleMouse(event: React.MouseEvent<HTMLDivElement>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    x.set(event.clientX - centerX);
+    y.set(event.clientY - centerY);
+  }
+
+  function handleMouseLeave() {
+    x.set(0);
+    y.set(0);
+  }
+
+  return (
+    <motion.div
+      variants={itemVariants}
+      onMouseMove={handleMouse}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX: springRotateX,
+        rotateY: springRotateY,
+        transformStyle: "preserve-3d",
+      }}
+      whileHover={{ scale: 1.02, z: 50 }}
+      className="group relative"
+    >
+      {/* Glow effect */}
+      <div className={`absolute -inset-0.5 bg-gradient-to-r ${achievement.color} rounded-2xl blur opacity-0 group-hover:opacity-40 transition-opacity duration-500`} />
+      
+      {/* Card */}
+      <div className="relative h-full backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-5 overflow-hidden">
+        {/* Animated gradient border */}
+        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className={`absolute inset-0 bg-gradient-to-r ${achievement.color} opacity-20`} />
+        </div>
+
+        {/* Shine effect */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10" style={{ transform: "translateZ(30px)" }}>
+          {/* Icon and Badge */}
+          <div className="flex items-start justify-between mb-3">
+            <motion.div 
+              className={`w-12 h-12 rounded-xl bg-gradient-to-br ${achievement.color} flex items-center justify-center text-2xl shadow-lg`}
+              whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+              transition={{ duration: 0.5 }}
+            >
+              {achievement.icon}
+            </motion.div>
+            <span className="text-[10px] font-medium text-white/50 bg-white/5 px-2 py-1 rounded-full border border-white/10">
+              {achievement.issuer}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h3 className="text-base font-bold text-white mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 transition-all">
+            {achievement.title}
+          </h3>
+          <p className={`text-xs font-medium bg-gradient-to-r ${achievement.color} bg-clip-text text-transparent mb-2`}>
+            {achievement.subtitle}
+          </p>
+
+          {/* Description */}
+          <p className="text-xs text-white/60 leading-relaxed line-clamp-3">
+            {achievement.desc}
+          </p>
+        </div>
+
+        {/* Corner decoration */}
+        <div className={`absolute -bottom-8 -right-8 w-24 h-24 bg-gradient-to-br ${achievement.color} opacity-10 rounded-full blur-2xl group-hover:opacity-30 transition-opacity`} />
+      </div>
+    </motion.div>
+  );
+}
 
 const page = () => {
   return (
     <div
-      style={{backgroundImage: "url(/bg-16.png)"}}
-      className='w-screen h-screen bg-cover bg-center flex items-center justify-center'>
-      {/* <div className="relative min-h-screen bg-gradient-to-br from-indigo-950 via-indigo-900 to-indigo-950 text-indigo-100 overflow-hidden"> */}
-      {/* Floating background shapes */}
-      <div className="absolute top-10 left-5 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-52 h-52 bg-pink-400/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute top-1/2 left-1/4 w-28 h-28 bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
-
-      <main className="relative z-10 max-w-6xl mx-auto px-4 py-20 mt-20">
-        {/* Grid Layout */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Left Section - About & Skills */}
-          <motion.section
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            {/* Hexagon Profile */}
-            <div className="relative w-64 h-72 mx-auto mb-10 animate-pulse">
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 via-pink-400 to-blue-400 rotate-0 animate-spin-slow clip-hexagon" />
-              <div className="absolute inset-1 bg-indigo-950 clip-hexagon flex items-center justify-center">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-gray-500 to-gray-800" />
-              </div>
-            </div>
-
-            {/* About */}
-            <h2 className="text-2xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
-              About Me
-            </h2>
-            <p className="text-indigo-200 leading-relaxed mb-4">
-              Welcome to my passionate specialization in bringing digital worlds
-              to life through cutting-edge 3D artistry. I transform creative
-              visions into stunning visual experiences.
-            </p>
-            <p className="text-indigo-200 leading-relaxed mb-8">
-              I am a master of my craft with expertise in 3D modeling,
-              texturing, and animation. My commitment: blending technical skill
-              with boundless creativity to deliver immersive visual imaginations.
-            </p>
-
-            
-            <div className="text-center mt-10">
-              <motion.button
-                onClick={() => window.location.href = '/my-projects'}
-                whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.05 }}
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium shadow-lg hover:shadow-pink-400/40"
-              >
-                View Projects
-              </motion.button>
-            </div>
-          </motion.section>
-
-          {/* Right Section - Milestones Carousel */}
-          <motion.section
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-8">
-              Milestones & Triumphs
-            </h2>
-{/* 
-            <Swiper 
-              spaceBetween={20} 
-              modules={[Grid]}
-              className="!items-stretch"
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  grid: { rows: 1, fill: "row" },
-                },
-                640: {
-                  slidesPerView: 1,
-                  grid: { rows: 1, fill: "row" },
-                },
-                768: {
-                  slidesPerView: 2,
-                  grid: { rows: 2, fill: "row" },
-                },
-              }}
-              loop={true}>
-              {[ 
-                {
-                  icon: "🏆",
-                  title: "ArtStation Editors' Pick - 2023",
-                  // desc: "Recognized for exceptional artistry and innovation in 3D character design.",
-                },
-                {
-                  icon: "📚",
-                  title: "3D Artist Magazine - Vol. 182",
-                  // desc: "Featured article showcasing advanced texturing techniques and workflow optimization.",
-                },
-                {
-                  icon: "🎯",
-                  title: "Lead Character Artist 'Project Emberhom'",
-                  // desc: "Directed the creation of hero characters for a AAA gaming title.",
-                },
-                {
-                  icon: "✨",
-                  title: "Unreal Engine Certified - 2022",
-                  // desc: "Mastered real-time rendering and advanced material creation.",
-                },
-              ].map((m, i) => (
-                <SwiperSlide key={i} className="h-full">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="h-full flex flex-col justify-between bg-indigo-950/70 border border-purple-400/30 rounded-2xl p-8 shadow-md hover:shadow-purple-500/30 transition"
-                  >
-                    <div className="text-4xl mb-4">{m.icon}</div>
-                    <h3 className="text-xl font-semibold text-indigo-100 mb-2">
-                      {m.title}
-                    </h3>
-                  </motion.div>
-                </SwiperSlide>
-              ))}
-            </Swiper> */}
-
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: "🏆",
-                title: "ArtStation Editors' Pick - 2023",
-                desc: "Recognized for exceptional artistry and innovation in 3D character design.",
-              },
-              {
-                icon: "📚",
-                title: "3D Artist Magazine - Vol. 182",
-                desc: "Featured article showcasing advanced texturing techniques and workflow optimization.",
-              },
-              {
-                icon: "🎯",
-                title: "Lead Character Artist 'Project Emberhom'",
-                desc: "Directed the creation of hero characters for a AAA gaming title.",
-              },
-              {
-                icon: "✨",
-                title: "Unreal Engine Certified - 2022",
-                desc: "Mastered real-time rendering and advanced material creation.",
-              },
-            ].map((m, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.02 }}
-                className="flex flex-col justify-between bg-indigo-950/70 
-                          border border-purple-400/30 rounded-2xl p-8 
-                          shadow-md hover:shadow-purple-500/30 transition h-full"
-              >
-                <div className="text-4xl mb-4">{m.icon}</div>
-                <h3 className="text-xl font-semibold text-indigo-100 mb-2">
-                  {m.title}
-                </h3>
-                <p className="text-indigo-300 leading-relaxed">{m.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-          </motion.section>
-        </div>
-      </main>
-
+      style={{ backgroundImage: "url(/bg-16.png)" }}
+      className="w-screen h-screen bg-cover bg-center bg-fixed overflow-hidden"
+    >
+      {/* Hide scrollbar CSS */}
       <style jsx global>{`
-        .clip-hexagon {
-          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
-        .animate-spin-slow {
-          animation: spin 20s linear infinite;
-        }
-        @keyframes spin {
-          to {
-            transform: rotate(360deg);
-          }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
+      
+      {/* Animated gradient overlay */}
+      <div className="fixed inset-0 bg-gradient-to-br from-indigo-950/80 via-purple-950/60 to-slate-950/80 pointer-events-none" />
+
+      {/* Floating orbs */}
+      <motion.div
+        animate={{
+          x: [0, 100, 0],
+          y: [0, -50, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+        className="fixed top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px] pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          x: [0, -80, 0],
+          y: [0, 80, 0],
+          scale: [1, 1.3, 1],
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+        className="fixed bottom-20 right-10 w-96 h-96 bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          x: [0, 60, 0],
+          y: [0, 40, 0],
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        className="fixed top-1/2 left-1/3 w-48 h-48 bg-pink-500/20 rounded-full blur-[80px] pointer-events-none"
+      />
+
+      {/* Particle grid */}
+      <div className="fixed inset-0 opacity-[0.03] pointer-events-none">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
+      </div>
+
+      {/* Scrollable content container - starts below navbar */}
+      <div className="absolute top-20 left-0 right-0 bottom-0 overflow-y-auto overflow-x-hidden scrollbar-hide">
+        <main className="relative z-10 max-w-7xl mx-auto px-6 py-8 pb-32">
+        {/* Grid Layout */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Section - Profile & About */}
+          <motion.section
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {/* 3D Profile Image Container */}
+            <motion.div
+              className="relative w-72 h-72 mx-auto mb-12"
+              animate={floatingAnimation}
+            >
+              {/* Rotating rings */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0"
+              >
+                <div className="absolute inset-0 rounded-full border-2 border-dashed border-purple-500/30" />
+              </motion.div>
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-4"
+              >
+                <div className="absolute inset-0 rounded-full border border-cyan-500/20" />
+              </motion.div>
+
+              {/* Glowing backdrop */}
+              <div className="absolute inset-8 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-full blur-2xl opacity-40 animate-pulse" />
+
+              {/* Main image container - Circular */}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="absolute inset-8 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl"
+              >
+                {/* Profile image */}
+                <div className="w-full h-full bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 flex items-center justify-center">
+                  <Image 
+                    src="/ProfilePhoto.png" 
+                    alt="Profile"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Overlay shine */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 rounded-full" />
+              </motion.div>
+
+              {/* Floating particles around image */}
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  animate={{
+                    y: [0, -20, 0],
+                    opacity: [0.3, 1, 0.3],
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: i * 0.5,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400"
+                  style={{
+                    top: `${20 + Math.random() * 60}%`,
+                    left: `${Math.random() * 100}%`,
+                  }}
+                />
+              ))}
+            </motion.div>
+
+            {/* About Me Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl"
+            >
+              {/* Section Title */}
+              <motion.div 
+                className="flex items-center gap-3 mb-6"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <div className="w-1 h-8 bg-gradient-to-b from-cyan-400 to-purple-500 rounded-full" />
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                  About Me
+                </h2>
+              </motion.div>
+
+              {/* Bio paragraphs with staggered animation */}
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="space-y-4"
+              >
+                <motion.p variants={itemVariants} className="text-white/70 leading-relaxed text-sm">
+                  I&apos;m a <span className="text-cyan-300 font-medium">full-stack software engineer</span> with around two years of experience building production-grade web applications and AI-powered systems. I enjoy working across the stack - from designing clean APIs and scalable backend services to building intuitive user interfaces.
+                </motion.p>
+                <motion.p variants={itemVariants} className="text-white/70 leading-relaxed text-sm">
+                  Worked at a <span className="text-purple-300 font-medium">US-based product startup</span>, shipping end-to-end features using Python, TypeScript, React, and cloud infrastructure. Built AI-driven workflows including RAG systems, data pipelines, and customer-facing APIs.
+                </motion.p>
+                <motion.p variants={itemVariants} className="text-white/70 leading-relaxed text-sm">
+                  I care deeply about <span className="text-pink-300 font-medium">code quality, system reliability, and user experience</span>, while valuing speed and pragmatism. I thrive in fast-moving environments and love turning messy problems into simple, maintainable solutions.
+                </motion.p>
+                <motion.p variants={itemVariants} className="text-white/70 leading-relaxed text-sm">
+                  Outside work, I explore <span className="text-amber-300 font-medium">AI, distributed systems, and real-world integrations</span> through side projects. Always curious, always learning.
+                </motion.p>
+              </motion.div>
+
+              {/* CTA Button */}
+              <motion.div 
+                className="mt-8 flex justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+              >
+                <motion.button
+                  onClick={() => (window.location.href = "/my-projects")}
+                  whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(168, 85, 247, 0.4)" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group relative px-8 py-4 rounded-2xl overflow-hidden"
+                >
+                  {/* Button gradient background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 blur-xl opacity-50 group-hover:opacity-80 transition-opacity" />
+                  
+                  {/* Animated shine */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                  </div>
+
+                  <span className="relative z-10 text-white font-semibold flex items-center gap-2">
+                    View My Projects
+                    <motion.span
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      →
+                    </motion.span>
+                  </span>
+                </motion.button>
+              </motion.div>
+            </motion.div>
+          </motion.section>
+
+          {/* Right Section - Achievements */}
+          <motion.section
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {/* Section Title */}
+            <motion.div
+              className="text-center mb-10"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <motion.div
+                animate={{ 
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                className="inline-block"
+                style={{ backgroundSize: "200% auto" }}
+              >
+                <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-300 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                  Honors & Awards
+                </h2>
+              </motion.div>
+              <motion.p 
+                className="text-white/50 mt-2 text-sm"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                Recognition for technical excellence and innovation
+              </motion.p>
+            </motion.div>
+
+            {/* Achievements Grid */}
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              style={{ perspective: "1000px" }}
+            >
+              {achievements.map((achievement, index) => (
+                <AchievementCard key={index} achievement={achievement} index={index} />
+              ))}
+            </motion.div>
+
+            
+          </motion.section>
+        </div>
+        </main>
+      </div>
     </div>
   );
-}
+};
 
-export default page
+export default page;
