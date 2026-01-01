@@ -1,6 +1,6 @@
 import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
 import { MdOutlineWorkOutline, MdOutlineContactMail, MdOutlineSchool } from "react-icons/md";
-import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
+import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { link } from "fs";
 
 
@@ -163,26 +163,23 @@ export const Socials = [
     name: "LinkedIn",
     icon: FaLinkedin,
     src: "/LinkedIn.png",
-    link: "https://www.linkedin.com/in/pravin-kumar-mahato-433194173/"
+    link: "https://www.linkedin.com/in/pravinkumarmahato/"
+  },
+  {
+    name: "Github",
+    icon: FaGithub,
+    src: "/github.png",
+    link: "https://github.com/pravinkumarmahato"
   },
   {
     name: "X (Twitter)",
     icon: FaXTwitter,
     src: "/twitter_x.png",
     link: "https://x.com/PravinK98620156"
-  }
+  },
 ];
 
 export const Projects = [
-  {
-    title: "Kube Credential - Issuance & Verification",
-    text: "A microservice-based application built with Node.js, TypeScript, React, and Kubernetes, designed to demonstrate secure credential issuance and verification workflows.\nThe system includes two backend services — Issuance and Verification — each powered by PostgreSQL and exposed via RESTful APIs. Both services are containerized and deployed using Kubernetes manifests, ensuring scalability, modularity, and isolation.\nThe frontend, built with React (Vite + TypeScript) and served through Nginx, provides an intuitive interface to issue and verify credentials in real-time.\n\nKey highlights include:\n• Microservice isolation with API-based communication\n• Secure endpoints protected by API keys\n• Pod-level worker identification using environment variables\n• CI-ready Jest testing for both backend and frontend\n• SHA-256-based credential hashing for deterministic IDs\n\nThis project showcases modern DevOps practices, Kubernetes orchestration, and end-to-end full-stack development.",
-    src: "/KubeCredential.png",
-    github: "https://github.com/pravinkumarmahato/kube-credential",
-    video: "",
-    live: "http://13.60.235.124:5000/",
-    documentation: ""
-  },
   {
     title: "Modern Nextjs Portfolio",
     text: "A polished personal portfolio built with Next.js 13 App Router, TypeScript, and Tailwind CSS to deliver a fast, accessible, and visually engaging experience.\nThe site highlights professional achievements, skills, and project work through reusable UI components, animated section transitions, and responsive layouts tailored for mobile, tablet, and desktop visitors.\nDynamic metadata, image optimization, and incremental static regeneration ensure strong SEO and instant page loads, while a server-side contact form with form validation routes inquiries securely.\n\nKey Highlights:\n• App Router architecture with server and client components\n• Tailwind-powered design system and Framer Motion animations\n• SEO-friendly OG images, metadata, and structured content\n• Contact form backed by API route validation and email delivery\n• Modular content sourcing via typed constants for easy updates",
@@ -211,20 +208,30 @@ export const Projects = [
     documentation: ""
   },
   {
+    title: "Realtime Pair Programming",
+    text: "A real-time collaborative pair programming platform built with FastAPI and React, enabling multiple users to edit code together through WebSocket-based synchronization.\n\nThe system allows users to create or join rooms, collaborate live in a shared editor, and receive lightweight AI-powered code suggestions.\n\nThe backend is implemented using FastAPI with REST and WebSocket endpoints, backed by PostgreSQL and SQLAlchemy for room persistence and synchronization logic. An in-memory realtime hub coordinates active WebSocket connections for low-latency broadcasts. The frontend, built with React, TypeScript, and Vite, uses the Monaco Editor and Redux Toolkit to manage live state updates.\n\nKey highlights include:\n• Real-time collaboration using WebSockets\n• Room-based lifecycle management with persistent storage\n• Redux-driven state synchronization for participants and code\n• Docker Compose setup for backend + database parity\n• Integration-tested WebSocket message propagation\n• Clean separation of domain logic and realtime coordination\n\nThis project demonstrates real-time systems design, WebSocket architecture, full-stack development, and pragmatic backend testing strategies.",
+    src: "/realtime_pair_programming.png",
+    github: "https://github.com/pravinkumarmahato/Realtime_Pair_Programming",
+    video: "https://www.youtube.com/embed/cVTZqgDB4O8",
+    live: "",
+    documentation: ""
+  },
+  {
+    title: "Kube Credential - Issuance & Verification",
+    text: "A microservice-based application built with Node.js, TypeScript, React, and Kubernetes, designed to demonstrate secure credential issuance and verification workflows.\nThe system includes two backend services — Issuance and Verification — each powered by PostgreSQL and exposed via RESTful APIs. Both services are containerized and deployed using Kubernetes manifests, ensuring scalability, modularity, and isolation.\nThe frontend, built with React (Vite + TypeScript) and served through Nginx, provides an intuitive interface to issue and verify credentials in real-time.\n\nKey highlights include:\n• Microservice isolation with API-based communication\n• Secure endpoints protected by API keys\n• Pod-level worker identification using environment variables\n• CI-ready Jest testing for both backend and frontend\n• SHA-256-based credential hashing for deterministic IDs\n\nThis project showcases modern DevOps practices, Kubernetes orchestration, and end-to-end full-stack development.",
+    src: "/KubeCredential.png",
+    github: "https://github.com/pravinkumarmahato/kube-credential",
+    video: "",
+    live: "http://13.60.235.124:5000/",
+    documentation: ""
+  },
+  {
     title: "Human Presence Detection Using RF Signals",
     text: "This project presents an energy-efficient and device-free human presence detection system based on Radio Frequency (RF) signal analysis.\nUsing an ESP32 module as a receiver, the system captures Received Signal Strength Indicator (RSSI) data transmitted from a Wi-Fi source. When a person moves within the monitored area, the human body — composed mostly of water — absorbs and distorts RF waves, causing measurable fluctuations in signal strength.\nBy applying moving average filtering and variance-based statistical analysis, the model detects these variations and classifies human presence with over 90% accuracy in controlled indoor environments.\nThis low-cost, non-intrusive solution eliminates the need for cameras or infrared sensors, making it ideal for smart homes, IoT systems, and security automation.\nA practical demonstration of how wireless sensing and signal analytics can enable intelligent ambient awareness.",
     src: "/RF_Detection.png",
     github: "",
     video: "",
     documentation: "https://drive.google.com/file/d/1wZGZP65f6AUbzIgJxDOPKLbrNrxZyrNo/view"
-  },
-  {
-    title: "Steganography Based Data Hiding",
-    text: "A data security application that combines steganography and encryption to ensure secure communication by hiding confidential messages inside images. Built with Python (Kivy, KivyMD), the system allows users to encrypt text using the AES algorithm and conceal it within an image file using LSB (Least Significant Bit) steganography.\nThe same desktop application can later extract and decrypt the hidden message using a valid encryption key, ensuring end-to-end data protection. If an invalid key is used, the system flags a potential unauthorized access attempt.\n\nKey Features:\n• AES-based message encryption and decryption\n• Image-based data concealment using LSB technique\n• Interactive GUI built with KivyMD\n• Secure key-based access validation\n• Visual comparison between original and encoded images\n\nThis project demonstrates the fusion of cryptography, steganography, and GUI-based application development for enhanced information security and privacy.",
-    src: "/Steganography.png",
-    github: "https://github.com/pravinkumarmahato/Steganography_Based_Data_Hiding",
-    video: "",
-    documentation: "https://drive.google.com/drive/folders/1Jsc_K9txBCWEnoPuiuhzfJZQpDgWkE2N?usp=sharing"
   },
   {
     title: "Lung Capacity Check - Spirometry for Pulmonary Function Test",
@@ -235,14 +242,6 @@ export const Projects = [
     documentation: "https://drive.google.com/drive/folders/1Bg8aoW-F-Iai47vLXIHjGiYvYWVw0if1?usp=sharing"
   },
   {
-    title: "Face Recognition Based Security Camera and Door Unlock System",
-    text: "A smart IoT-powered security solution built using Python (Flask, OpenCV) and Raspberry Pi 3.\nThis project enables real-time face recognition to automatically identify individuals and enhance home security.\nWhen someone approaches the door, the Raspberry Pi camera captures their face and compares it with stored images in the MySQL database. If the person is recognized, an email notification is sent to the administrator.\nThrough a Flask web app, the admin can view live video, manage user data, and remotely unlock the door using a connected solenoid lock via relay control.\nIt showcases seamless integration of IoT hardware, computer vision, and web technologies, offering a modern, automated approach to home security with live monitoring and remote access capabilities.",
-    src: "/FaceRecognition.JPG",
-    github: "https://github.com/pravinkumarmahato/Face-Recognition-Based-Security-Camera-and-Door-Unlock-System",
-    video: "",
-    documentation: "https://drive.google.com/file/d/1Ln2ACwlUrvlx3toF9hv3qx9WK7fXdEZF/view?usp=sharing"
-  },
-  {
     title: "Precision Agriculture Using Normalized Difference Vegetation Index",
     text: "This project leverages NDVI (Normalized Difference Vegetation Index) to analyze crop health through image-based vegetation assessment. NDVI helps farmers and researchers evaluate the vitality of crops by measuring how plants reflect near-infrared (NIR) and red light—healthy plants reflect more NIR and absorb more red light.\nBuilt with Python (Flask, PIL), the system processes RGB and NIR images to compute NDVI values and visualize crop health on a web interface. The application enables users to monitor plant conditions, detect early signs of stress or disease, and make data-driven agricultural decisions.\n\nKey Features:\n• NDVI-based vegetation health analysis\n• Integration of RGB & NIR imagery\n• Flask-based interactive web application\n• Visual NDVI output for easy interpretation\n• Supports precision farming and crop monitoring\n\nThis project bridges remote sensing, image processing, and web technology to promote sustainable precision agriculture.",
     src: "/NDVI.png",
@@ -250,6 +249,22 @@ export const Projects = [
     video: "https://www.youtube.com/embed/MoILI6NdK5Q",
     explaination: "https://www.youtube.com/embed/L9qOARq9S9k",
     documentation: ""
+  },
+  {
+    title: "Steganography Based Data Hiding",
+    text: "A data security application that combines steganography and encryption to ensure secure communication by hiding confidential messages inside images. Built with Python (Kivy, KivyMD), the system allows users to encrypt text using the AES algorithm and conceal it within an image file using LSB (Least Significant Bit) steganography.\nThe same desktop application can later extract and decrypt the hidden message using a valid encryption key, ensuring end-to-end data protection. If an invalid key is used, the system flags a potential unauthorized access attempt.\n\nKey Features:\n• AES-based message encryption and decryption\n• Image-based data concealment using LSB technique\n• Interactive GUI built with KivyMD\n• Secure key-based access validation\n• Visual comparison between original and encoded images\n\nThis project demonstrates the fusion of cryptography, steganography, and GUI-based application development for enhanced information security and privacy.",
+    src: "/Steganography.png",
+    github: "https://github.com/pravinkumarmahato/Steganography_Based_Data_Hiding",
+    video: "",
+    documentation: "https://drive.google.com/drive/folders/1Jsc_K9txBCWEnoPuiuhzfJZQpDgWkE2N?usp=sharing"
+  },
+  {
+    title: "Face Recognition Based Security Camera and Door Unlock System",
+    text: "A smart IoT-powered security solution built using Python (Flask, OpenCV) and Raspberry Pi 3.\nThis project enables real-time face recognition to automatically identify individuals and enhance home security.\nWhen someone approaches the door, the Raspberry Pi camera captures their face and compares it with stored images in the MySQL database. If the person is recognized, an email notification is sent to the administrator.\nThrough a Flask web app, the admin can view live video, manage user data, and remotely unlock the door using a connected solenoid lock via relay control.\nIt showcases seamless integration of IoT hardware, computer vision, and web technologies, offering a modern, automated approach to home security with live monitoring and remote access capabilities.",
+    src: "/FaceRecognition.JPG",
+    github: "https://github.com/pravinkumarmahato/Face-Recognition-Based-Security-Camera-and-Door-Unlock-System",
+    video: "",
+    documentation: "https://drive.google.com/file/d/1Ln2ACwlUrvlx3toF9hv3qx9WK7fXdEZF/view?usp=sharing"
   },
   {
     title: "RFID-Based Attendance Management System",
@@ -279,25 +294,7 @@ export const education = [
     contents: [
       "",
     ],
-  },
-  // {
-  //   degree: "12th Science (PCMB)",
-  //   institute: "Kendriya Vidyalaya N.A.D. Karanja",
-  //   date: "2017-2019",
-  //   grade: "61.40 %",
-  //   contents: [
-  //     "",
-  //   ],
-  // },
-  // {
-  //   degree: "10th",
-  //   institute: "Kendriya Vidyalaya N.A.D. Karanja",
-  //   date: "2016-2017",
-  //   grade: "8 CGPA",
-  //   contents: [
-  //     "",
-  //   ],
-  // }
+  }
 ];
 
 export const experiences = [
@@ -365,5 +362,53 @@ export const NavLinks = [
     name: "/contact-me",
     icon: MdOutlineContactMail,
     link: "/contact-me",
+  },
+];
+
+export const achievements = [
+  {
+    icon: "🏆",
+    color: "from-amber-400 to-orange-500",
+    glowColor: "amber",
+    title: "Best Project Award",
+    subtitle: "Code for Life Hackathon",
+    issuer: "VIT • May 2023",
+    desc: "Awarded Best Project among 100+ teams for developing 'Precision Agriculture Using NDVI' - a Flask application for crop health analysis.",
+  },
+  {
+    icon: "⭐",
+    color: "from-cyan-400 to-blue-500",
+    glowColor: "cyan",
+    title: "Best Volunteer Award",
+    subtitle: "Jigyaasa Science Honors Program",
+    issuer: "KC College • Aug 2022",
+    desc: "Honored for outstanding contribution developing an IoT-based facial recognition security system using Python, OpenCV, and Raspberry Pi.",
+  },
+  {
+    icon: "🎯",
+    color: "from-emerald-400 to-teal-500",
+    glowColor: "emerald",
+    title: "All India Rank 80",
+    subtitle: "VITMEE Entrance Exam",
+    issuer: "VIT University • Jul 2022",
+    desc: "Secured AIR 80 in VITMEE 2022. Recognized among the top 1% of national applicants for technical proficiency.",
+  },
+  {
+    icon: "🥈",
+    color: "from-violet-400 to-purple-500",
+    glowColor: "violet",
+    title: "2nd Position — SIH Internal",
+    subtitle: "Smart India Hackathon",
+    issuer: "KC College • Mar 2022",
+    desc: "Developed backend for 'Precision Agriculture Using NDVI' - image processing system for crop health using Flask and Python.",
+  },
+  {
+    icon: "🥉",
+    color: "from-rose-400 to-pink-500",
+    glowColor: "rose",
+    title: "2nd Runner-up",
+    subtitle: "Project Deep Blue, Mastek Season 7",
+    issuer: "Mastek Ltd. • Mar 2022",
+    desc: "Achieved 2nd Runner-up among 280+ teams for 'Lung Capacity Check' - a digital spirometer using Arduino and Python.",
   },
 ];
